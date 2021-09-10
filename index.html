@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div class="wrapper">
         <header id="header" class="header">
             <img id="form__submit" class="header__logo " src="images/logo_header.svg" alt="logo Valeria Ptiich">
@@ -78,6 +79,7 @@
                 <picture>
                     <source media="(max-width: 480px)" srcset="images/header_img320.svg">
                     <source media="(max-width: 1000px)" srcset="images/header_img1000.svg">
+                    <!-- <source media="(max-width: 1000px)" srcset="images/header_img1000.svg"> -->
                     <img class="post__header-img" src="images/header_img.svg" alt="">
                 </picture>
                 <h1 class="post__wb">
@@ -805,6 +807,34 @@
         </footer>
     </div>
 
+
+    <!-- popup -->
+
+    <input type="checkbox" class="hide" id="p1">
+    <input type="checkbox" class="hide" id="p2">
+
+    <label for="p1" class="button">Click me</label>
+    <label for="p2" class="button">Click me too</label>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Info box</h2>
+            <label for="p1" class="close">&times;</label>
+            <div class="content">
+                <p>This is done totally without JavaScript. Just HTML and CSS.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup2" class="overlay light">
+        <label for="p2" class="cancel"></label>
+        <div class="popup">
+            <h2>What the what?</h2>
+            <div class="content">
+                <p>Click outside the popup to close.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
