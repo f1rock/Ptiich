@@ -480,7 +480,8 @@
                     <p class="block__description">Одностраничный сайт. <br> Подходит для теста<br> нового
                         товара
                         или услуги, <br> салонов красоты, <br>конференций и тп.</p>
-                    <a class="block__btn">Заказать</a>
+                    <!-- <a class="block__btn">Заказать</a> -->
+                    <label for="checkbox-lp" class="block__btn">Заказать</label>
                 </div>
 
                 <div class=" blocks__block">
@@ -491,7 +492,8 @@
                     <p class="block__description">Многостраничный сайт<br>для компаний с описанием<br>услуг и
                         товаров.
                         Также<br>подходит для новостных<br>сайтов и блогов.</p>
-                    <a class="block__btn">Заказать</a>
+                    <!-- <a class="block__btn">Заказать</a> -->
+                    <label for="checkbox-site" class="block__btn">Заказать</label>
                 </div>
 
                 <div class=" blocks__block">
@@ -502,7 +504,8 @@
                     <p class="block__description">Интернет-магазин<br>для продажи товаров<br>разных
                         категорий<br>с
                         корзиной, онлайн<br>оплатой и доставкой.</p>
-                    <a class="block__btn">Заказать</a>
+                    <!-- <a class="block__btn">Заказать</a> -->
+                    <label for="checkbox-shop" class="block__btn">Заказать</label>
                 </div>
 
                 <div class=" blocks__block">
@@ -513,7 +516,8 @@
                     <p class="block__description">Работы по Вашему<br>действующему сайту.<br>Дизайн
                         новых
                         страниц<br>для сайта, либо дизайн<br>отдельных блоков.</p>
-                    <a class="block__btn">Заказать</a>
+                    <!-- <a class="block__btn">Заказать</a> -->
+                    <label for="checkbox-bp" class="block__btn">Заказать</label>
                 </div>
             </div>
         </div>
@@ -760,7 +764,7 @@
                 <textarea class="form__msg" required id="msg" name="user_message"
                     placeholder="Расскажите о проекте"></textarea>
                 <p class="form__policy">Заполняя эту форму, Вы принимаете условия</p>
-                <a class="form__link" href="#">Политики Конфиденциальности</a>
+                <a class="form__link" href="privacy_policy.html" target="_blank">Политики Конфиденциальности</a>
                 <button class="form__btn" type="submit">Отправить</button>
             </form>
         </div>
@@ -769,14 +773,14 @@
                     class="contact-information__title-accent">UX/UI</span> </p>
             <p class="contact-information__content">Вы всегда можете связаться co мной <br>через мессенджер или
                 почту</p>
-            <div class="contact-information__social">
-                <a href="http://keksby.ru">
+            <div class="contact-information__social" target="_blank">
+                <a href="https://t.me/ptiich">
                     <img src="images/telegram.svg" alt="Telegram">
                 </a>
-                <a href="http://keksby.ru">
+                <a href="https://dribbble.com/Ptiich" target="_blank">
                     <img src="images/Dribbble.svg" alt="Dribbble">
                 </a>
-                <a href="http://keksby.ru">
+                <a href="https://www.behance.net/ptiich" target="_blank">
                     <img src="images/Behance.svg" alt="Behance">
                 </a>
                 <div class="contact-information__mail">
@@ -793,13 +797,13 @@
             <img class="footer__logo" src="images/logo_header.svg" alt="logo Valeria Ptiich">
             <nav class="footer__menu">
                 <ul class="footer__menu__ul">
-                    <li><a href="" class="current">Проекты</a></li>
-                    <li><a href="">Стоимость</a></li>
-                    <li><a href="">Условия</a></li>
-                    <li><a href="">Блог</a></li>
+                    <li><a href="#projects" class="current">Проекты</a></li>
+                    <li><a href="#prices">Стоимость</a></li>
+                    <li><a href="#stages">Условия</a></li>
+                    <li><a href="#">Блог</a></li>
                 </ul>
             </nav>
-            <a class="footer__link " href="#">Политика Конфиденциальности</a>
+            <a class="footer__link" href="privacy_policy.html" target="_blank">Политика Конфиденциальности</a>
             <div class="footer__copyright">
                 <p class="copyright">2021 © Ptiich | <span class="accent">Made </span> with</p>
             </div>
@@ -810,31 +814,133 @@
 
     <!-- popup -->
 
-    <input type="checkbox" class="hide" id="p1">
-    <input type="checkbox" class="hide" id="p2">
+    <input type="checkbox" class="hide" id="checkbox-lp">
 
-    <label for="p1" class="button">Click me</label>
-    <label for="p2" class="button">Click me too</label>
-
-    <div id="popup1" class="overlay">
+    <div id="popup-lp" class="overlay">
         <div class="popup">
-            <h2>Info box</h2>
-            <label for="p1" class="close">&times;</label>
+            <h2><span class="accent">Заказать </span>Landing page</h2>
+            <label for="checkbox-lp" class="close">&times;</label>
             <div class="content">
-                <p>This is done totally without JavaScript. Just HTML and CSS.</p>
+                <p class="popup__p">Представлены минимальные цены за работу над типовым<br>лэндингом, который стандартно
+                    включает 8
+                    блоков.<br>Каждый проект
+                    уникален, и цена индивидуальна,<br>исходя из количества и объема блоков,<br>а также
+                    наличия/отсутствия адаптивного
+                    дизайна.<br>Точную цену и сроки я смогу назвать после просмотра<br>заполненного брифа и проведения
+                    интервью.</p>
+                <div class="contacts-form contacts-form__popup">
+                    <form class="contacts-form__form" action="#" method="post" enctype="multipart/form-data">
+                        <input class="form__text" required type="text" id="name_Landing" name="user_name"
+                            placeholder="Имя">
+                        <input class="form__email" required type="text" id="mail_Landing" name="user_mail"
+                            placeholder="Email / Telegram / WhatsApp ">
+                        <textarea class="form__msg" required id="msg_Landing" name="user_message"
+                            placeholder="Расскажите о проекте"></textarea>
+                        <p class="form__policy">Заполняя эту форму, Вы принимаете условия</p>
+                        <a class="form__link" href="privacy_policy.html" target="_blank">Политики Конфиденциальности</a>
+                        <button class="form__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="popup2" class="overlay light">
-        <label for="p2" class="cancel"></label>
+    <input type="checkbox" class="hide" id="checkbox-site">
+
+    <div id="popup-site" class="overlay">
         <div class="popup">
-            <h2>What the what?</h2>
+            <h2><span class="accent">Заказать </span>Site</h2>
+            <label for="checkbox-site" class="close">&times;</label>
             <div class="content">
-                <p>Click outside the popup to close.</p>
+                <p class="popup__p">Представлены минимальные цены за работу над типовым<br>проектом, который стандартно
+                    включает главную страницу<br>+ 4
+                    внутренних страницы. Каждый проект уникален, и цена<br>индивидуальна, исходя из количества
+                    внутренних страниц,<br>а также
+                    наличия/отсутствия адаптивного дизайна.<br>Точную цену и сроки я смогу назвать после
+                    просмотра<br>заполненного брифа и
+                    проведения интервью.</p>
+                <div class="contacts-form contacts-form__popup">
+                    <form class="contacts-form__form" action="#" method="post" enctype="multipart/form-data">
+                        <input class="form__text" required type="text" id="name_Landing" name="user_name"
+                            placeholder="Имя">
+                        <input class="form__email" required type="text" id="mail_Landing" name="user_mail"
+                            placeholder="Email / Telegram / WhatsApp ">
+                        <textarea class="form__msg" required id="msg_Landing" name="user_message"
+                            placeholder="Расскажите о проекте"></textarea>
+                        <p class="form__policy">Заполняя эту форму, Вы принимаете условия</p>
+                        <a class="form__link" href="privacy_policy.html" target="_blank">Политики Конфиденциальности</a>
+                        <button class="form__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+
+    <input type="checkbox" class="hide" id="checkbox-shop">
+
+    <div id="popup-shop" class="overlay">
+        <div class="popup">
+            <h2><span class="accent">Заказать </span>Shop</h2>
+            <label for="checkbox-shop" class="close">&times;</label>
+            <div class="content">
+                <p class="popup__p">Представлены минимальные цены за работу над типовым<br>проектом, который стандартно
+                    включает главную страницу<br>+ 4
+                    внутренних страницы. Каждый проект уникален, и цена<br>индивидуальна, исходя из количества
+                    внутренних
+                    страниц,<br>а также
+                    наличия/отсутствия адаптивного дизайна.<br>Точную цену и сроки я смогу назвать после
+                    просмотра<br>заполненного брифа и
+                    проведения интервью.</p>
+                <div class="contacts-form contacts-form__popup">
+                    <form class="contacts-form__form" action="#" method="post" enctype="multipart/form-data">
+                        <input class="form__text" required type="text" id="name_Landing" name="user_name"
+                            placeholder="Имя">
+                        <input class="form__email" required type="text" id="mail_Landing" name="user_mail"
+                            placeholder="Email / Telegram / WhatsApp ">
+                        <textarea class="form__msg" required id="msg_Landing" name="user_message"
+                            placeholder="Расскажите о проекте"></textarea>
+                        <p class="form__policy">Заполняя эту форму, Вы принимаете условия</p>
+                        <a class="form__link" href="privacy_policy.html" target="_blank">Политики Конфиденциальности</a>
+                        <button class="form__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" class="hide" id="checkbox-bp">
+
+    <div id="popup-bp" class="overlay">
+        <div class="popup">
+            <h2><span class="accent">Заказать </span>Block/page</h2>
+            <label for="checkbox-bp" class="close">&times;</label>
+            <div class="content">
+                <p class="popup__p">Представлены минимальные цены за работу над типовым<br>проектом, который стандартно
+                    включает главную страницу<br>+ 4
+                    внутренних страницы. Каждый проект уникален, и цена<br>индивидуальна, исходя из количества
+                    внутренних
+                    страниц,<br>а также
+                    наличия/отсутствия адаптивного дизайна.<br>Точную цену и сроки я смогу назвать после
+                    просмотра<br>заполненного
+                    брифа и
+                    проведения интервью.</p>
+                <div class="contacts-form contacts-form__popup">
+                    <form class="contacts-form__form" action="#" method="post" enctype="multipart/form-data">
+                        <input class="form__text" required type="text" id="name_Landing" name="user_name"
+                            placeholder="Имя">
+                        <input class="form__email" required type="text" id="mail_Landing" name="user_mail"
+                            placeholder="Email / Telegram / WhatsApp ">
+                        <textarea class="form__msg" required id="msg_Landing" name="user_message"
+                            placeholder="Расскажите о проекте"></textarea>
+                        <p class="form__policy">Заполняя эту форму, Вы принимаете условия</p>
+                        <a class="form__link" href="privacy_policy.html" target="_blank">Политики Конфиденциальности</a>
+                        <button class="form__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>

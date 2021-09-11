@@ -115,8 +115,6 @@ ul {
   /*убираем левый отступ, равный 40px*/
 }
 
-
-
 .accent {
   color: #fdb75e;
 }
@@ -557,8 +555,7 @@ ul {
   width: 3.5vw;
 }
 
-.group__desc {
-}
+.group__desc {}
 
 .stage__title {
   font-family: "AvertaDemoPE-Regular", sans-serif;
@@ -705,16 +702,13 @@ ul {
 }
 
 /* Слайдер */
-.slick-slider {
-}
+.slick-slider {}
 
 /* Слайдер запущен */
-.slick-slider.slick-initialized {
-}
+.slick-slider.slick-initialized {}
 
 /* Слайдер с точками */
-.slick-slider.slick-dotted {
-}
+.slick-slider.slick-dotted {}
 
 /* Ограничивающая оболочка */
 .slick-list {
@@ -727,55 +721,42 @@ ul {
 }
 
 /* Слайд */
-.slick-slide {
-}
+.slick-slide {}
 
 /* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
+.slick-slide.slick-active {}
 
 /* Слайд основной */
-.slick-slide.slick-current {
-}
+.slick-slide.slick-current {}
 
 /* Слайд по центру */
-.slick-slide.slick-center {
-}
+.slick-slide.slick-center {}
 
 /* Клонированный слайд */
-.slick-slide.slick-cloned {
-}
+.slick-slide.slick-cloned {}
 
 /* Стрелка */
-.slick-arrow {
-}
+.slick-arrow {}
 
 /* Стрелка влево */
-.slick-arrow.slick-prev {
-}
+.slick-arrow.slick-prev {}
 
 /* Стрелка вправо */
-.slick-arrow.slick-next {
-}
+.slick-arrow.slick-next {}
 
 /* Стрелка не активная */
-.slick-arrow.slick-disabled {
-}
+.slick-arrow.slick-disabled {}
 
 /* Точки (булиты) */
-.slick-dots {
-}
+.slick-dots {}
 
-.slick-dots li {
-}
+.slick-dots li {}
 
 /* Активная точка */
-.slick-dots li.slick-active {
-}
+.slick-dots li.slick-active {}
 
 /* Элемент точки */
-.slick-dots li button {
-}
+.slick-dots li button {}
 
 /* Конкретный слайдер */
 .slider {
@@ -969,7 +950,6 @@ textarea:hover {
   justify-content: space-around;
   border: 0;
   cursor: pointer;
-
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.07);
   -moz-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.07);
@@ -1058,8 +1038,7 @@ textarea:hover {
   height: 1.375vw;
 }
 
-.footer__menu {
-}
+.footer__menu {}
 
 .footer__menu__ul {
   display: flex;
@@ -1073,8 +1052,7 @@ textarea:hover {
   margin-right: 1.25vw;
 }
 
-.current {
-}
+.current {}
 
 .footer__link {
   font-size: 1vw;
@@ -1087,11 +1065,9 @@ textarea:hover {
   font-size: 1.125vw;
 }
 
-.copyright {
-}
+.copyright {}
 
-.accent {
-}
+.accent {}
 
 .footer__heart {
   width: 1.125vw;
@@ -1178,26 +1154,39 @@ textarea:hover {
   cursor: default;
 }
 
-#p1:checked~#popup1.overlay {
+#checkbox-lp:checked~#popup-lp.overlay {
   visibility: visible;
   opacity: 1;
   z-index: 1;
 }
 
-#p2:checked~#popup2.overlay {
+#checkbox-site:checked~#popup-site.overlay {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+#checkbox-shop:checked~#popup-shop.overlay {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+#checkbox-bp:checked~#popup-bp.overlay {
   visibility: visible;
   opacity: 1;
   z-index: 1;
 }
 
 .popup {
-  margin: 75px auto;
-  padding: 20px;
+  margin: 35px auto;
+  padding: 23px 0px 23px 43px;
   background: #fff;
   border: 1px solid #666;
-  width: 300px;
+  width: 538px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   position: relative;
+  border-radius: 5px;
 }
 
 .light .popup {
@@ -1207,22 +1196,22 @@ textarea:hover {
 
 .popup h2 {
   margin-top: 0;
-  color: #666;
-  font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+  font-size: 35px;
+  margin-bottom: 9px;
 }
 
 .popup .close {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 20px;
-  right: 20px;
+  top: 11px;
+  right: 27px;
   opacity: 0.8;
   transition: all 200ms;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 50px;
+  /* font-weight: bold; */
   text-decoration: none;
-  color: #666;
+  color: #000;
   cursor: pointer;
 }
 
@@ -1231,17 +1220,66 @@ textarea:hover {
 }
 
 .popup .content {
-  max-height: 400px;
+  /* max-height: 400px; */
   overflow: auto;
+  width: auto;
 }
 
-.popup p {
-  margin: 0 0 1em;
+.popup__p {
+  margin: 0px 0 20px;
+  font-size: 15px;
 }
 
 .popup p:last-child {
   margin: 0;
 }
+
+.contacts-form__popup {}
+
+.contacts-form__popup input::placeholder,
+.contacts-form__popup textarea::placeholder {
+  font-family: "AvertaDemoPE-Regular", sans-serif;
+  width: 400;
+  font-size: 18px;
+}
+
+.contacts-form__popup .contacts-form__form {
+  margin-top: 0;
+}
+
+.contacts-form__popup input,
+.contacts-form__popup textarea {
+  width: 449px;
+  height: 58px;
+  font-size: 15px;
+  padding-top: 0;
+  padding-left: 21px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+}
+
+.contacts-form__popup textarea {
+  min-height: 111px;
+  padding-top: 13px;
+  width: 426px;
+}
+
+.contacts-form__popup .form__btn {
+  height: 52px;
+  font-size: 19px;
+  width: 448px;
+  border-radius: 5px;
+}
+
+.contacts-form__popup .form__policy {
+  font-size: 15px;
+}
+
+.contacts-form__popup .form__link {
+  font-size: 15px;
+}
+
+/* popup Landing page */
 
 /* адаптив min 1000px */
 /* @media (max-width: 1400px) {
@@ -1398,6 +1436,7 @@ textarea:hover {
   .recent-projects {
     padding: 8.5vw 0;
   }
+
   .recent-projects__title {
     margin-bottom: 6vw;
   }
@@ -1406,9 +1445,11 @@ textarea:hover {
     width: 35.8vw;
     margin: 2vw 3vw 2vw 2vw;
   }
+
   .project__title {
     width: 55.2vw;
   }
+
   .title__type {
     font-size: 1.6vw;
     border: 0.068vw solid #fdb75e;
@@ -1417,11 +1458,13 @@ textarea:hover {
     margin-top: 2vw;
     border-radius: 0.338vw;
   }
+
   .type__description {
     font-size: 2vw;
     margin-top: 1vw;
     margin-bottom: 1.5vw;
   }
+
   .project__title a {
     font-size: 2vw;
   }
@@ -1434,6 +1477,7 @@ textarea:hover {
     margin: 0 2vw;
     border-radius: 0.5vw;
   }
+
   .recent-projects__project:not(:last-child) {
     margin-bottom: 5vw;
   }
@@ -1485,6 +1529,7 @@ textarea:hover {
   .prices__blocks {
     margin-top: 6vw;
   }
+
   /* Консультирую бесплатно 1000*/
 
   .title__free {
@@ -1509,6 +1554,7 @@ textarea:hover {
   .stages {
     margin-bottom: 15vw;
   }
+
   .stages__title {
     margin-bottom: 6vw;
   }
@@ -1517,6 +1563,7 @@ textarea:hover {
     width: 37.6vw;
     border-radius: 0.5vw;
   }
+
   .group__stage:nth-child(1) {
     margin-right: 3vw;
     margin-bottom: 3vw;
@@ -1561,11 +1608,13 @@ textarea:hover {
   .support__title {
     font-size: 4vw;
   }
+
   .support__img {
     margin-top: 1vw;
     height: auto;
     width: auto;
   }
+
   .support__description {
     font-size: 2.1vw;
     margin-top: 1.1vw;
@@ -1612,43 +1661,52 @@ textarea:hover {
   .feedback {
     margin-bottom: 9vw;
   }
-  .accent {
-  }
+
+  .accent {}
+
   .bg_cont {
     left: 17.9vw;
     top: 40.8vw;
   }
+
   .bg {
     width: 93.6vw;
   }
+
   .slider {
     margin-bottom: 7.5vw;
     margin-left: 5vw;
   }
-  .slider__item {
-  }
+
+  .slider__item {}
+
   .feedback-img {
     width: 58.2vw;
     margin: 0 -1vw 0 -1vw;
   }
+
   .flex {
     margin-bottom: 15vw;
     margin-left: 22vw;
   }
+
   .give-feedback {
     width: 26.1vw;
     height: auto;
     border-radius: 0.5vw;
     padding-top: 3.9vw;
   }
+
   .give-feedback__title {
     font-size: 2vw;
     margin-bottom: 2.5vw;
   }
+
   .give-feedback__btn {
     font-size: 1.6vw;
     margin-bottom: 3.9vw;
   }
+
   .slider .slick-arrow.slick-prev {
     left: -3vw;
   }
@@ -1658,34 +1716,40 @@ textarea:hover {
   .contact_block {
     padding: 8.6vw 0 6.4vw 2vw;
   }
-  .contacts-form {
-  }
+
+  .contacts-form {}
+
   .contacts-form__title {
     font-size: 4vw;
   }
-  .accent {
-  }
+
+  .accent {}
+
   .contacts-form__form {
     margin-top: 3.3vw;
   }
+
   .form__text {
     width: 42.4vw;
     height: 5.8vw;
     margin-bottom: 1.3vw;
     border-radius: 0.4vw;
   }
+
   .form__email {
     width: 42.4vw;
     height: 5.8vw;
     margin-bottom: 1.3vw;
     border-radius: 0.4vw;
   }
+
   .form__msg {
     width: 40.7vw;
     min-height: 13.3vw;
     margin-bottom: 1.3vw;
     border-radius: 0.4vw;
   }
+
   .contacts-form__form textarea,
   .contacts-form__form textarea {
     font-size: 1.6vw;
@@ -1697,38 +1761,47 @@ textarea:hover {
     width: 400;
     font-size: 1.6vw;
   }
+
   .form__policy {
     margin: 0;
     font-size: 1.4vw;
   }
+
   .form__link {
     font-size: 1.4vw;
     margin-bottom: 1.6vw;
   }
+
   .form__btn {
     font-size: 2vw;
     border-radius: 0.4vw;
     width: 42.4vw;
     height: 5.8vw;
   }
+
   .contact-information {
     margin-left: 10vw;
     margin-top: 9.5vw;
   }
+
   .contact-information__title {
     font-size: 3.2vw;
     margin-bottom: 1.7vw;
   }
+
   .contact-information__content {
     font-size: 1.8vw;
   }
+
   .contact-information__social {
     margin-top: 2vw;
   }
+
   .contact-information__social img {
     width: 3.8vw;
     margin: 0 1.5vw 0 1.5vw;
   }
+
   .contact-information__mail {
     font-size: 1.8vw;
     margin-top: 2.1vw;
@@ -1740,37 +1813,44 @@ textarea:hover {
     padding-right: 2vw;
     padding-left: 2vw;
   }
+
   .footer {
     padding-left: 2vw;
   }
+
   .footer__logo {
     height: 1.6vw;
   }
-  .footer__menu {
-  }
+
+  .footer__menu {}
+
   .footer__menu__ul {
     margin-left: 6.7vw;
     font-size: 1.4vw;
     margin-right: 8vw;
   }
-  .current {
-  }
+
+  .current {}
+
   .footer__link {
     font-size: 1.3vw;
     margin-right: 2.4vw;
   }
+
   .footer__copyright {
     font-size: 1.4vw;
   }
-  .copyright {
-  }
-  .accent {
-  }
+
+  .copyright {}
+
+  .accent {}
+
   .footer__heart {
     width: 1.6vw;
     height: auto;
   }
 }
+
 /* адаптив 6.25vw -------------------------------------------------*/
 
 @media (max-width: 480px) {
@@ -2101,8 +2181,7 @@ textarea:hover {
     display: none;
   }
 
-  .slider_doing_320 .slick-list {
-  }
+  .slider_doing_320 .slick-list {}
 
   .description__title {
     margin-top: 5.625vw;
@@ -2369,8 +2448,7 @@ textarea:hover {
     margin-bottom: 9.375vw;
   }
 
-  .accent {
-  }
+  .accent {}
 
   .stages__group {
     flex-direction: column;
@@ -2455,8 +2533,7 @@ textarea:hover {
     font-size: 4.6875vw;
   }
 
-  .excretion {
-  }
+  .excretion {}
 
   /* Часто задаваемые вопросы 320*/
 
@@ -2649,11 +2726,9 @@ textarea:hover {
     border-radius: 0.9375vw;
   }
 
-  textarea#msg {
-  }
+  textarea#msg {}
 
-  textarea#msg {
-  }
+  textarea#msg {}
 
   .form__btn {
     width: auto;
