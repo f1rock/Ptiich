@@ -1,4 +1,108 @@
 
+$('.contacts-form__form').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    $('input, textarea', form).attr('disabled','');
+
+    data.append( 'name', 		$('[name="user_name"]', form).val() );
+    data.append( 'email', 		$('[name="user_mail"]', form).val() );
+    data.append( 'text', 		$('[name="user_message"]', form).val() );
+   
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if ( cont ) {
+            $.each( cont, function( key, value ) {
+                data.append( key, value );
+            });
+        }
+    });
+    
+    $.ajax({
+        url: 'php/ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function() {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if ( myXhr.upload ) {
+                myXhr.upload.addEventListener( 'progress', function(e) {
+                    if ( e.lengthComputable ) {
+                        let percentage = ( e.loaded / e.total ) * 100;
+                            percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html( percentage + '%' );
+                    }
+                }, false );
+            }
+
+            return myXhr;
+        },
+        error: function( jqXHR, textStatus ) {
+            // Тут выводим ошибку
+        },
+        complete: function() {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+          // alert('Необработанная ошибка. Проверьте консоль и устраните.');
+          $('.form__btn').attr('disabled', 'disabled');
+          $('.modal').addClass('modal_active');
+          $('body').addClass('hidden');
+            console.log('Complete')
+            form.reset() 
+        }
+    });
+
+    return false;
+});
+
+// отключение кнопки до заполнения формы
+const checkParams = () => {
+    const user_name = $('.form__text').val();
+    const user_message = $('.form__msg').val();
+    const user_mail = $('.form__email').val();
+    
+    if (user_name.length && user_message.length && user_mail.length) {
+        $('.form__btn').removeAttr('disabled');
+    } else {
+        $('.form__btn').attr('disabled', 'disabled');
+    }
+}
+
+// popup "спасибо!" оставить заявку
+// $(function () {
+//   $('#order-button').click(function (e) {
+//     e.preventDefault();
+//     $('.modal').addClass('modal_active');
+//     $('body').addClass('hidden');
+//   });
+
+  $('.modal__close-button').click(function (e) {
+    e.preventDefault();
+    $('.modal').removeClass('modal_active');
+    $('body').removeClass('hidden');
+  });
+
+  $('.modal').mouseup(function (e) {
+    let modalContent = $('.modal__content');
+    if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+      $(this).removeClass('modal_active');
+      $('body').removeClass('hidden');
+    }
+  });
+// });
 
 //  hamburger menu
 var circle = document.querySelector('.material-btn');
@@ -158,6 +262,7 @@ checkbox.addEventListener('change', () => {
         btn_submit.setAttribute('disabled', 'true');
     }
 });
+
 
 
 
